@@ -19,3 +19,35 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+#loginLogoutContainer {
+  display: flex;
+  justify-content: right;
+}
+
+#headerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#loginLogout {
+  margin-left: auto;
+}
+
+#title {
+  font-size: 50px;
+  /* margin: 20px auto; */
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 10vw; */
+}
+
+#navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  width: 50vw;
+}
