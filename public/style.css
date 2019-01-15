@@ -27,6 +27,8 @@ form div {
   left: 0;
   z-index: 10;
   background: white;
+  font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
+    ' ', 'sans-serif';
 }
 
 #loginLogoutContainer {
@@ -41,12 +43,20 @@ form div {
 
 #loginLogout {
   margin-left: auto;
+  margin-right: 1vw;
+  padding-top: 1vh;
 }
 
 #title {
+  font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
+    ' ', 'sans-serif';
   font-size: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.titleSmall {
+  font-size: 37px;
 }
 
 #navContainer {
@@ -65,7 +75,7 @@ hr {
 
 #aboutImg {
   height: auto;
-  max-width: 65%;
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -73,4 +83,19 @@ hr {
   opacity: 0.5;
   z-index: 5;
   border-radius: 50%;
+  position: absolute;
+}
+
+#bioContainer {
+  position: relative;
+}
+
+#bio {
+  /* still need to make bio responsive */
+  z-index: 10;
+  padding-top: 25vh;
+  padding-left: 10vw;
+  padding-right: 40vw;
+  font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
+    ' ', 'sans-serif';
 }
