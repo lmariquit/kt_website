@@ -20,6 +20,17 @@ form div {
   display: inline-block;
 }
 
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background: white;
+  font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
+    ' ', 'sans-serif';
+}
+
 #loginLogoutContainer {
   display: flex;
   justify-content: right;
@@ -32,14 +43,22 @@ form div {
 
 #loginLogout {
   margin-left: auto;
+  margin-right: 1vw;
+  padding-top: 1vh;
 }
 
 #title {
+  font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
+    'sans-serif';
   font-size: 50px;
-  /* margin: 20px auto; */
   margin-left: auto;
   margin-right: auto;
-  /* width: 10vw; */
+}
+
+.titleSmall {
+  font-size: 37px;
+  font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
+    'sans-serif';
 }
 
 #navContainer {
@@ -50,4 +69,36 @@ form div {
 
 hr {
   width: 50vw;
+}
+
+#routesContainer {
+  margin-top: 150px;
+}
+
+#aboutImg {
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: 5;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#bioContainer {
+  position: relative;
+}
+
+#bio {
+  /* still need to make bio responsive */
+  font-size: 1.5vw;
+  z-index: 10;
+  padding-top: 25vh;
+  padding-left: 10vw;
+  padding-right: 40vw;
+  font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
+    ' ', 'sans-serif';
 }

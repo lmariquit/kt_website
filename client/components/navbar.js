@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
+  <div id="nav">
     <div id="loginLogoutContainer">
       {isLoggedIn ? (
         <div id="loginLogout">
@@ -23,7 +23,11 @@ const Navbar = ({handleClick, isLoggedIn}) => (
       )}
     </div>
     <div id="headerContainer">
-      <div id="title">KT_WEBSITE</div>
+      <div id="title">
+        K<a className="titleSmall">ATIE</a> M<a className="titleSmall">
+          ARIQUIT
+        </a>
+      </div>
     </div>
     <nav id="navContainer">
       <Link to="/home">About</Link>
