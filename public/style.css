@@ -20,6 +20,11 @@ form div {
   display: inline-block;
 }
 
+/* #wholePageContainer {
+  display: flex;
+  flex-direction: column;
+} */
+
 #nav {
   position: fixed;
   top: 0;
@@ -29,6 +34,11 @@ form div {
   background: white;
   font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
     ' ', 'sans-serif';
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
 }
 
 #loginLogoutContainer {
@@ -67,12 +77,21 @@ form div {
   align-items: center;
 }
 
+.navLink {
+  color: rgb(25, 106, 255);
+}
+.navLink:hover {
+  color: rgb(128, 172, 255);
+}
+
 hr {
   width: 50vw;
 }
 
 #routesContainer {
   margin-top: 150px;
+  min-height: 90%;
+  margin-bottom: 100px;
 }
 
 #aboutImg {
@@ -101,4 +120,31 @@ hr {
   padding-right: 40vw;
   font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
     ' ', 'sans-serif';
+}
+
+/* FOOTER */
+#footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85px;
+  flex-shrink: 0;
+  margin: 0 -9999rem;
+  padding: 0.25rem 9999rem;
+  background: rgba(109, 238, 255, 0.753);
+}
+
+#iconContainer {
+  display: flex;
+}
+
+#iconContainer i {
+  font-size: 25px;
+  margin: 20px;
+  color: rgb(25, 106, 255);
+}
+
+#iconContainer i:hover {
+  color: rgb(128, 172, 255);
 }
