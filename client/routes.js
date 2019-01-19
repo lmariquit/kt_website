@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {Login, Signup, UserHome} from './components'
-import {me} from './store'
+import {Login, Signup, UserHome, BlogView} from './components'
+import {me, fetchAllPosts} from './store'
 
 /**
  * COMPONENT
@@ -21,6 +21,7 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/home" component={UserHome} />
         <Route path="/login" component={Login} />
+        <Route path="/blog" component={BlogView} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
@@ -46,8 +47,9 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    loadInitialData() {
-      dispatch(me())
+    async loadInitialData() {
+      await dispatch(me())
+      await dispatch(fetchAllPosts())
     }
   }
 }
