@@ -150,3 +150,73 @@ hr {
 #iconContainer i:hover {
   color: rgb(128, 172, 255);
 }
+
+/* BlogView */
+#entireBlogView {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#blogContainerIndividual {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  height: 60vh;
+  margin: 5px 10px;
+}
+
+#blogHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  height: 14vh;
+}
+
+#dateContainer {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  height: auto;
+  margin: 10px 10px;
+  align-items: center;
+}
+
+#year {
+  font-size: 2vw;
+}
+
+#month {
+  font-size: 2.5vw;
+}
+
+#day {
+  font-size: 4vw;
+}
+
+#titleBlog {
+  width: 90%;
+  height: auto;
+  margin: 10px 10px;
+  font-size: 3.2vw;
+}
+
+#blogContentContainer {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+}
+
+#picBlog {
+  width: 35%;
+  height: auto;
+  border-style: solid;
+  margin: 10px 10px;
+}
+
+#contentBlog {
+  width: 65%;
+  border-style: solid;
+  margin: 10px 10px;
+}

@@ -9,19 +9,42 @@ class BlogView extends Component {
   }
   render() {
     const blogPosts = this.props.blogPosts
-    console.log(blogPosts)
-    let month = blogPosts.createdAt
-    let day = blogPosts.createdAt
-    console.log('month', month, 'day', day)
+
     return (
-      <div>
+      <div id="entireBlogView">
         {blogPosts.map(post => {
+          // create Date
+          let cYear = post.createdAt.toString().slice(0, 4)
+          let cMonth = post.createdAt.toString().slice(5, 7)
+          let cDay = post.createdAt.toString().slice(8, 10) - 1
+          let createDate = new Date(cYear, cMonth, cDay)
+
+          // updated Date
+          let uYear = post.createdAt.toString().slice(0, 4)
+          let uMonth = post.createdAt.toString().slice(5, 7)
+          let uDay = post.createdAt.toString().slice(8, 10) - 1
+          let updatedDate = new Date(uYear, uMonth, uDay)
+
           return (
             <BlogViewSingle
               key={post.id}
               title={post.title}
               content={post.content}
               pic={post.pic}
+              createYear={createDate.getFullYear()}
+              createMonth={createDate
+                .toLocaleString('en-us', {
+                  month: 'short'
+                })
+                .toUpperCase()}
+              createDay={createDate.getDate()}
+              updatedYear={updatedDate.getFullYear()}
+              updatedMonth={updatedDate
+                .toLocaleString('en-us', {
+                  month: 'short'
+                })
+                .toUpperCase()}
+              updatedDay={updatedDate.getDate()}
             />
           )
         })}

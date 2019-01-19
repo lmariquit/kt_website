@@ -1,13 +1,24 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 const BlogViewSingle = props => {
-  const {title, content, pic} = props
+  const {
+    title,
+    content,
+    pic,
+    createYear,
+    createMonth,
+    createDay,
+    updatedYear,
+    updatedMonth,
+    updatedDay
+  } = props
   return (
     <div id="blogContainerIndividual">
       <div id="blogHeaderContainer">
         <div id="dateContainer">
-          <div id="month">Jan</div>
-          <div id="day">18</div>
+          {/* <div id="year">{createYear}</div> */}
+          <div id="month">{createMonth}</div>
+          <div id="day">{createDay}</div>
         </div>
         <div id="titleBlog">{title}</div>
       </div>
