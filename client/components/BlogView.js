@@ -12,6 +12,7 @@ class BlogView extends Component {
 
     return (
       <div id="entireBlogView">
+        <div>RECENT POSTS</div>
         {blogPosts.map(post => {
           // create Date
           let cYear = post.createdAt.toString().slice(0, 4)
