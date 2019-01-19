@@ -134,7 +134,7 @@ hr {
   margin: 0 -9999rem;
   margin-top: auto;
   padding: 0.25rem 9999rem;
-  background: rgba(109, 238, 255, 0.753);
+  /* background: rgba(109, 238, 255, 0.753); */
 }
 
 #iconContainer {

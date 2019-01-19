@@ -15,7 +15,7 @@ const Blog = db.define('blog', {
     defaultValue: 'Katie Mariquit'
   },
   content: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   media: {
