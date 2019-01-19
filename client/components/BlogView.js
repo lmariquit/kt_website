@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import BlogViewSingle from './BlogViewSingle'
 
 class BlogView extends Component {
   constructor(props) {
@@ -8,8 +9,24 @@ class BlogView extends Component {
   }
   render() {
     const blogPosts = this.props.blogPosts
-    return <div>{blogPosts.map(post => <div>{post.title}</div>)}</div>
-    // return <div>OWEIJFOWEIJ</div>
+    console.log(blogPosts)
+    let month = blogPosts.createdAt
+    let day = blogPosts.createdAt
+    console.log('month', month, 'day', day)
+    return (
+      <div>
+        {blogPosts.map(post => {
+          return (
+            <BlogViewSingle
+              key={post.id}
+              title={post.title}
+              content={post.content}
+              pic={post.pic}
+            />
+          )
+        })}
+      </div>
+    )
   }
 }
 
