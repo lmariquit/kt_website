@@ -11,7 +11,7 @@ export const UserHome = props => {
   return (
     <div id="bioContainer">
       {/* <h3>Welcome, {email}</h3> */}
-      <img id="aboutImg" src="20170919_144228.jpg" />
+      <img id="aboutImg" src="kt_image.jpeg" />
       <div id="bio">
         <p>
           Upon graduating from Rutgers University, I worked at Jefferies'

@@ -15,6 +15,10 @@ nav a {
   margin: 1em;
 }
 
+div hr {
+  margin-bottom: 3vh;
+}
+
 form div {
   margin: 1em;
   display: inline-block;
@@ -32,16 +36,34 @@ form div {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  width: 100vw;
+  z-index: 20;
   background: white;
   font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
     ' ', 'sans-serif';
+  /* padding-bottom: 2px; */
+}
+
+#nav hr {
+  margin: 0 25%;
+  width: 50vw;
+}
+
+#gradient {
+  position: absolute;
+  height: 7vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  ); /* Standard syntax (must be last) */
 }
 
 #content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin-top: 1vh;
 }
 
 #loginLogoutContainer {
@@ -50,9 +72,6 @@ form div {
 }
 
 #headerContainer {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: center;
 }
@@ -94,36 +113,45 @@ hr {
   width: 50vw;
 }
 
-#routesContainer {
-  /* margin-top: 150px; */
+/* #routesContainer {
+  margin-top: 150px;
   min-height: 90%;
   margin-bottom: 100px;
-}
-
-#aboutImg {
-  height: auto;
-  max-width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  opacity: 0.5;
-  z-index: 5;
-  border-radius: 50%;
-  position: absolute;
-}
+} */
 
 #bioContainer {
   position: relative;
+  /* text-align: center; */
+  /* overflow: hidden; */
+  height: 100vh;
+  width: 100vw;
+}
+
+#aboutImg {
+  width: 100vw;
+  height: auto;
+  /* IMPORTANT! max width and height keeps it within the container */
+  max-width: 100%;
+  max-height: 100%;
+  /* display: block; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: 5;
+  position: absolute;
+  margin: 0 auto -85px;
 }
 
 #bio {
   /* still need to make bio responsive */
   font-size: 1.5vw;
   z-index: 10;
-  padding-top: 25vh;
+  width: 60vw;
+  position: absolute;
+  /* padding-top: 25vh;
   padding-left: 10vw;
-  padding-right: 40vw;
+  padding-right: 40vw; */
   font-family: 'Avant Garde', 'Avantgarde', 'Century Gothic', 'CenturyGothic',
     ' ', 'sans-serif';
 }

@@ -24,6 +24,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
       </Link>
     </nav>
     <hr />
+    <div id="gradient" />
   </div>
 )
 
