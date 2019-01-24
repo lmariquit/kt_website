@@ -26,7 +26,9 @@ form div {
 } */
 
 #nav {
-  position: fixed;
+  /* position: fixed; */
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -48,6 +50,9 @@ form div {
 }
 
 #headerContainer {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
 }
@@ -90,7 +95,7 @@ hr {
 }
 
 #routesContainer {
-  margin-top: 150px;
+  /* margin-top: 150px; */
   min-height: 90%;
   margin-bottom: 100px;
 }
