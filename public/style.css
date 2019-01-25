@@ -128,6 +128,7 @@ hr {
 }
 
 #aboutImg {
+  /* NOT RESPONSIVE.... MAY HAVE TO DO WITH THE BIOCONTAINER ABOVE */
   width: 100vw;
   height: auto;
   /* IMPORTANT! max width and height keeps it within the container */
