@@ -12,43 +12,53 @@ class BlogView extends Component {
 
     return (
       <div id="entireBlogView">
-        <div>RECENT POSTS</div>
-        {blogPosts.map(post => {
-          // create Date
-          let cYear = post.createdAt.toString().slice(0, 4)
-          let cMonth = post.createdAt.toString().slice(5, 7)
-          let cDay = post.createdAt.toString().slice(8, 10) - 1
-          let createDate = new Date(cYear, cMonth, cDay)
+        <div id="recentPostsTitleContainer">
+          <div id="leftRecentPosts" />
+          <div id="recentPosts">RECENT POSTS</div>
+          <div id="rightRecentPosts" />
+        </div>
+        <div id="blogPostsContainer">
+          <div id="leftBlogPosts" />
+          <div id="blogPosts">
+            {blogPosts.map(post => {
+              // create Date
+              let cYear = post.createdAt.toString().slice(0, 4)
+              let cMonth = post.createdAt.toString().slice(5, 7)
+              let cDay = post.createdAt.toString().slice(8, 10) - 1
+              let createDate = new Date(cYear, cMonth, cDay)
 
-          // updated Date
-          let uYear = post.createdAt.toString().slice(0, 4)
-          let uMonth = post.createdAt.toString().slice(5, 7)
-          let uDay = post.createdAt.toString().slice(8, 10) - 1
-          let updatedDate = new Date(uYear, uMonth, uDay)
+              // updated Date
+              let uYear = post.createdAt.toString().slice(0, 4)
+              let uMonth = post.createdAt.toString().slice(5, 7)
+              let uDay = post.createdAt.toString().slice(8, 10) - 1
+              let updatedDate = new Date(uYear, uMonth, uDay)
 
-          return (
-            <BlogViewSingle
-              key={post.id}
-              title={post.title}
-              content={post.content}
-              pic={post.pic}
-              createYear={createDate.getFullYear()}
-              createMonth={createDate
-                .toLocaleString('en-us', {
-                  month: 'short'
-                })
-                .toUpperCase()}
-              createDay={createDate.getDate()}
-              updatedYear={updatedDate.getFullYear()}
-              updatedMonth={updatedDate
-                .toLocaleString('en-us', {
-                  month: 'short'
-                })
-                .toUpperCase()}
-              updatedDay={updatedDate.getDate()}
-            />
-          )
-        })}
+              return (
+                <BlogViewSingle
+                  key={post.id}
+                  title={post.title}
+                  content={post.content}
+                  pic={post.pic}
+                  createYear={createDate.getFullYear()}
+                  createMonth={createDate
+                    .toLocaleString('en-us', {
+                      month: 'short'
+                    })
+                    .toUpperCase()}
+                  createDay={createDate.getDate()}
+                  updatedYear={updatedDate.getFullYear()}
+                  updatedMonth={updatedDate
+                    .toLocaleString('en-us', {
+                      month: 'short'
+                    })
+                    .toUpperCase()}
+                  updatedDay={updatedDate.getDate()}
+                />
+              )
+            })}
+          </div>
+          <div id="rightBlogPosts" />
+        </div>
       </div>
     )
   }
