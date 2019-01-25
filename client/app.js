@@ -1,21 +1,14 @@
 import React from 'react'
 
-import {Navbar, Footer} from './components'
-import Routes from './routes'
+import {Title, Navbar, Content, Footer} from './components'
 
 const App = () => {
   return (
     <div id="wholePageContainer">
+      <Title />
       <Navbar />
-      <div id="content">
-        <div id="routesContainer">
-          <Routes />
-        </div>
-        <div id="footerContainer">
-          <hr />
-          <Footer />
-        </div>
-      </div>
+      <Content />
+      <Footer />
     </div>
   )
 }
