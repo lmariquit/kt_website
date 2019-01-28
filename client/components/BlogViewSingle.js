@@ -28,6 +28,7 @@ const BlogViewSingle = props => {
           <div id="contentBlog">{content}</div>
         </div>
       </div>
+      <div id="clickToReadMore">CLICK TO READ MORE</div>
     </div>
   )
 }

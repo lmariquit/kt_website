@@ -296,7 +296,7 @@ hr {
   display: flex;
   flex-direction: row;
   height: 32vh;
-  border-bottom: 0.2px solid grey;
+  /* border-bottom: 0.2px solid grey; */
 }
 
 #picBlog {
@@ -310,8 +310,9 @@ hr {
 #contentBlogContainer {
   display: -webkit-box-flex;
   width: 50vw;
-  /* border-style: solid; */
-  /* border-width: 1px; */
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
   margin: 10px 10px;
   padding: 5px 5px;
 }
@@ -321,4 +322,9 @@ hr {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
   overflow: hidden;
+}
+
+#clickToReadMore {
+  text-align: right;
+  font-size: 1vw;
 }
