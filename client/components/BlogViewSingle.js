@@ -23,7 +23,9 @@ const BlogViewSingle = props => {
         <div id="titleBlog">{title}</div>
       </div>
       <div id="blogContentContainer">
-        <div id="picBlog">{pic}</div>
+        <div id="picBlog">
+          <img src={pic} />
+        </div>
         <div id="contentBlogContainer">
           <div id="contentBlog">{content}</div>
         </div>

@@ -23,13 +23,13 @@ class BlogView extends Component {
             {blogPosts.map(post => {
               // create Date
               let cYear = post.createdAt.toString().slice(0, 4)
-              let cMonth = post.createdAt.toString().slice(5, 7)
+              let cMonth = post.createdAt.toString().slice(5, 7) - 1
               let cDay = post.createdAt.toString().slice(8, 10) - 1
               let createDate = new Date(cYear, cMonth, cDay)
 
               // updated Date
               let uYear = post.createdAt.toString().slice(0, 4)
-              let uMonth = post.createdAt.toString().slice(5, 7)
+              let uMonth = post.createdAt.toString().slice(5, 7) - 1
               let uDay = post.createdAt.toString().slice(8, 10) - 1
               let updatedDate = new Date(uYear, uMonth, uDay)
 

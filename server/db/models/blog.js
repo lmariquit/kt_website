@@ -20,6 +20,12 @@ const Blog = db.define('blog', {
   },
   media: {
     type: Sequelize.STRING
+  },
+  pic: {
+    type: Sequelize.STRING,
+    validate: {
+      isUrl: true
+    }
   }
   // datePosted: {
   //   type: Sequelize.DATE,
